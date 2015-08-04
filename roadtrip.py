@@ -44,6 +44,7 @@ class Coordinate(object):
             with open(self.keyfile) as f:
                 self.key = f.readline() # google api key
         except IOError:
+            self.key = None
             print "No API key."
 
 
